@@ -1,0 +1,88 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Color pastel */
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    color: #ffb6c1; /* Color pastel rosa */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+  
+  p {
+    text-align: center;
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo para la lista de planes */
+  .plans {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 5%; /* Mover la lista más a la izquierda */
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  ul li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  ul li input {
+    margin-right: 10px;
+  }
+  
+  /* Botón de redirección - Colocarlo en la parte superior derecha */
+  .redirect-button {
+    position: absolute;
+    top: 150px;
+    right: 90px; /* Cambié 'left' por 'right' para mover el botón a la derecha */
+    width: 200px;
+    height: 50px;
+    background-color: #ffb6c1; /* Botón color pastel rosa */
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block; /* Hace que todo el área d  el botón sea clickeable */
+    text-align: center;
+    line-height: 50px; /* Asegura que el texto esté centrado verticalmente */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  padding: 0; /* Elimina cualquier padding extra */
+  }
+  
+  .redirect-button:hover {
+    background-color: #f8ffb6;
+    display: block; /* Hace que todo el área del botón sea clickeable */
+    text-align: center;
+  }
+  
+  /* Estilo del pie de página */
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
