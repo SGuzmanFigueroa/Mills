@@ -12,6 +12,18 @@
     line-height: 1.6;
   }
   
+  .login{
+    color: #ffb6c1; /* Color pastel rosa */
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none; 
+    position: absolute;
+    top: 45px;
+    right: 90px; /* Cambié 'left' por 'right' para mover el botón a la derecha */
+    width: 200px;
+    height: 50px;
+  }
+
   h1 {
     color: #ffb6c1; /* Color pastel rosa */
     text-align: center;
