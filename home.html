@@ -9,10 +9,13 @@
 </head>
 <body>
     <header>
+      <header>
+        <a class="login" href="login.html">Ingresar a ver nuestra historia juntos...</a>
         <h1>Planes con Milss</h1>
         <p>Estos son nuestros planes juntos</p>
-        <a class="login" href="#">Ingresar a ver nuestra historia juntos...</a>
       </header>
+
+      <a href="flower.html" class="redirect-button">CLICK AQUÍ</a>
 
       <section class="plans">
         <ul id="plan-list">
@@ -116,10 +119,26 @@
         </ul>
       </section>
 
-      <a href="flower.html" class="redirect-button">CLICK AQUÍ</a>
+
 
   <footer>
     <p>&copy; 2025 Planes con Milss. Todos los derechos reservados.</p>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const checkboxes = document.querySelectorAll('#plan-list input[type="checkbox"]');
+  
+      // Cargar estado guardado desde localStorage
+      checkboxes.forEach((checkbox, index) => {
+        const saved = localStorage.getItem(`plan-${index}`);
+        checkbox.checked = saved === 'true';
+        
+        // Guardar al hacer clic
+        checkbox.addEventListener('change', () => {
+          localStorage.setItem(`plan-${index}`, checkbox.checked);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
