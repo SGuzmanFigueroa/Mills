@@ -10,12 +10,34 @@
     <div class="login-container">
         <h2>Bienvenid@ a Milss 💖</h2>
         <p>Ingresa para ver nuestra historia</p>
-        <form onsubmit="event.preventDefault(); window.location.href='home.html';">
-          <input type="text" placeholder="Tu nombre" required />
-          <input type="password" placeholder="Tu clave secreta" required />
-          <button type="submit">Ingresar</button>
-        </form>
+        <form onsubmit="return validarLogin(event)">
+            <input type="text" id="username" placeholder="Tu nombre" required />
+            <input type="password" id="password" placeholder="Tu clave secreta" required />
+            <button type="submit">Ingresar</button>
+          </form>
         <footer>&copy; 2025 Planes con Milss</footer>
       </div>
+      <script>
+        function validarLogin(event) {
+          event.preventDefault();
+      
+          // Usuarios válidos codificados en Base64
+          const usuarios = {
+            [atob("U2ViYXM=")]: atob("MTgxOA=="),    // Sebas : 1818
+            [atob("TWlsZW5h")]: atob("MTgxOA==")     // Milena : 1818
+          };
+      
+          const nombreIngresado = document.getElementById('username').value;
+          const claveIngresada = document.getElementById('password').value;
+      
+          // Verificar si el usuario existe y la clave es correcta
+          if (usuarios[nombreIngresado] === claveIngresada) {
+            localStorage.setItem("nombreUsuario", nombreIngresado);
+            window.location.href = "home.html";
+          } else {
+            alert("Usuario o contraseña incorrectos 😢");
+          }
+        }
+      </script>
 </body>
 </html>

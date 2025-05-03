@@ -3,6 +3,10 @@ body {
   background-color: #ffe5e5; /* Rojo pastel suave */
   color: #333;
   line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,6 +18,47 @@ ul li input[type="checkbox"] {
   width: 20px;
   height: 20px;
   border-radius: 5px;
+}
+
+.countdown-container {
+  text-align: center;
+}
+
+.countdown-header {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.countdown {
+  display: inline-flex;
+  gap: 0.75rem;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  display: inline-block;
+  min-width: 3ch;
+  padding: 0.5rem 0.75rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #6a6a6a;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.label {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Enlace "Ingresar a ver nuestra historia" */

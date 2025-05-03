@@ -12,8 +12,35 @@
       <header>
         <a class="login" href="login.html">Ingresar a ver nuestra historia juntos...</a>
         <h1>Planes con Milss</h1>
+        <p id="saludo"></p>
         <p>Estos son nuestros planes juntos</p>
       </header>
+
+      <div class="countdown-container">
+        <p class="countdown-header">⚡ Sebas llega en</p>
+        <div class="countdown">
+          <div class="countdown-item">
+            <span id="months" class="value">00</span>
+            <span class="label">Meses</span>
+          </div>
+          <div class="countdown-item">
+            <span id="days" class="value">00</span>
+            <span class="label">Días</span>
+          </div>
+          <div class="countdown-item">
+            <span id="hours" class="value">00</span>
+            <span class="label">Horas</span>
+          </div>
+          <div class="countdown-item">
+            <span id="minutes" class="value">00</span>
+            <span class="label">Minutos</span>
+          </div>
+          <div class="countdown-item">
+            <span id="seconds" class="value">00</span>
+            <span class="label">Segundos</span>
+          </div>
+        </div>
+      </div>
 
       <a href="flower.html" class="redirect-button">CLICK AQUÍ</a>
 
@@ -124,6 +151,7 @@
   <footer>
     <p>&copy; 2025 Planes con Milss. Todos los derechos reservados.</p>
   </footer>
+  <script src="countdown.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const checkboxes = document.querySelectorAll('#plan-list input[type="checkbox"]');
@@ -140,5 +168,13 @@
       });
     });
   </script>
+
+<script>
+  const nombre = localStorage.getItem("nombreUsuario");
+  if (nombre) {
+    document.getElementById("saludo").textContent = `Hola, ${nombre} 💕`;
+  }
+</script>
+
 </body>
 </html>
