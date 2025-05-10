@@ -1,0 +1,62 @@
+:root {
+  --bg-color: #fff0f5;
+  --text-color: #4b0082;
+  --highlight: #ff69b4;
+  --card-bg: #ffffff;
+  --border-color: #ffb6c1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #ffe4e1, #fad0c4);
+}
+
+audio {
+  display: none;
+}
+
+.carta-container {
+  max-width: 700px;
+  background-color: var(--card-bg);
+  border: 5px double var(--border-color);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--highlight);
+  margin-bottom: 20px;
+}
+
+.mensaje {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+.volver-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--highlight);
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.volver-btn:hover {
+  background-color: #ffe4b5;
+  color: #333;
+}
